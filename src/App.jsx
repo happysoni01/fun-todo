@@ -58,7 +58,7 @@ const App = () => {
       <form onSubmit={onAddClick}>
         <label >Arre Arre Naam Toh Batao*</label>
         <input onChange={onUsernameChange} value={username} type="text" placeholder="Bata bhi do" required/>
-        <input onChange={onTextChange} value={task} type="text" placeholder={`Hi, ${username}! Aaj kya karne ka socha?`} />
+        <input onChange={onTextChange} value={task} type="text" placeholder={`Hi, ${username}! Aaj kya karoge ?`} />
         <div className="buttons">
         <button type="submit" className="btn">Karenge</button>
         <button onClick={onDeleteAll} className="btn">Sara Kaam Khatam</button>
@@ -67,12 +67,12 @@ const App = () => {
       </div>
       <div className="card2">
         {todos.length === 0 ? (
-          <p>Kl karay so aaj kar, aaj kar aaj karay so abb !</p>
+          <p>Kl karay so aaj kar, aaj karay so abb !</p>
         ) : (
           <ul>
             {todos.map((value, index) => {
               return (
-                <li key={index}>{index + 1}. Hum Aaj {value} Karenge
+                <li key={index}>{index + 1}. Aaj Hum {value} Karenge
                   <button onClick={() => onDelete(value)} className="btn">Kar Chuke</button>
                 </li>
               );
